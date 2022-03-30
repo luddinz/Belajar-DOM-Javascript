@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculatorSimple</title>
+  </head>
+  <body>
+    <h3>Ini adalah rumus perhitungan Kecepatan a.k.a Speed</h3>
+    <label>nominalJarak</label>
+    <input type="number" class="angka_pertama" />
+    <br />
+    <br />
+
+    <label>nominalWaktu</label>
+    <input type="number" class="angka_kedua" />
+    <br />
+    <br />
+
+    <button class="tombol_hasil">=</button>
+
+    <p class="hasil"></p>
+
+    <script>
+      const elementAngkaPertama = document.querySelector(".angka_pertama");
+      const elementAngkaKedua = document.querySelector(".angka_kedua");
+
+      const elementTombolTambah = document.querySelector(".tombol_hasil");
+
+      const elementHasil = document.querySelector(".hasil");
+
+      // Hasil
+      elementTombolTambah.addEventListener("click", function () {
+        const nilaiAngkaPertama = Number(elementAngkaPertama.value);
+        const nilaiAngkaKedua = Number(elementAngkaKedua.value);
+
+        const hasil = nilaiAngkaPertama / nilaiAngkaKedua;
+        elementHasil.textContent = `Hasilnya adalah = ${hasil}`;
+      });
+    </script>
+  </body>
+</html>
