@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge</title>
+  </head>
+  <body style="text-align: center">
+    <h1 style="color: black">changeColor</h1>
+
+    <p id="paragraph_atas" style="font-size: 16px; font-weight: bold"></p>
+
+    <button onclick="run()">Click</button>
+
+    <p
+      id="paragraph_bawah"
+      style="color: white; font-size: 20px; font-weight: bold"
+    ></p>
+
+    <script>
+      const el_up = document.getElementById("paragraph_atas");
+      const el_down = document.getElementById("paragraph_bawah");
+      const str = "Click on button for test";
+
+      el_up.innerHTML = str;
+
+      function changeColor(color) {
+        document.body.style.background = color;
+      }
+
+      function run() {
+        changeColor("blue");
+      }
+    </script>
+  </body>
+</html>
